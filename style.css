@@ -10,7 +10,8 @@ a {
 .article {
     background-color: #444;
     color: #999;
-    font-size: 20px
+    font-size: 20px;
+    cursor: pointer;
 }
 .article:hover {
     font-size: 22px
@@ -76,13 +77,17 @@ a {
 .menu-button:hover {
     background-color: rgba(120,120,120, 0.5);
 }
+
+
+
 .items {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
 }
 .collection-item {
     background-color: #555;
-    padding: 10px;
+    padding: 2%;
     margin: 10px;
     color: #ccc;
     font-size: 80%;
@@ -91,6 +96,8 @@ a {
     display:grid;
     grid-template-columns: 2fr 3fr;
     column-gap: 5px;
+    border-left:rgb(184, 121, 4) solid 1px;
+    border-right:rgb(184, 121, 4) solid 1px;
 }
 .collection-item img {
     height: 100%;
@@ -102,11 +109,39 @@ a {
 }
 
 .collection-item tr {
-    height: 10px;
+    height: 80%;
 }
 .collection-item h3 {
-    font-size: 20px;
+    font-size: 160%;
 }
+
+
+
+.filter-pad {
+    border:rgb(184, 121, 4) solid 1px;
+    width: 200px;
+    background-color: #555;
+}
+.filter-pad .filter-title {
+    border: none;
+    color:rgb(184, 121, 4);
+    font-weight: bold;
+}
+.filter-pad .filter {
+    border:rgb(184, 121, 4) solid 1px;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.filter-pad .filter:hover {
+    
+    background-color: #888
+}
+
+
+
 footer {
     position: fixed;
     bottom:0px;
