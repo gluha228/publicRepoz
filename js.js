@@ -5,12 +5,22 @@ function getmenu(){
     } else { doc.hidden = true}
 }
 const itemsSourse = [
-    ["Vostok precision class", "Urss", 1965, "Wristwatch", "Wostok 2809", "Wostok", "Swiss", "Manual"],
-    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual"],
-    ["Roamer Jubile", "Swiss", 1958, "Wristwatch", "MST 402", "Roamer", "Swiss", "Manual"],
-    ["Cylindre 4 rubis", "France", 1890, "Pocket watch", "38mm", "Remontoir","Cylinder", "Key"],
-    ["Vostok precision class", "Urss", 1962, "Wristwatch", "Wostok 2809A", "Wostok", "Swiss", "Manual"]];
-const sourseOrder = {'Age' : 2};
+    ["Vostok precision class", "Urss", 1965, "Wristwatch", "Wostok 2809", "Wostok", "Swiss", "Manual","0"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Roamer Jubile", "Swiss", 1958, "Wristwatch", "MST 402", "Roamer", "Swiss", "Manual","2"],
+    ["Cylindre 4 rubis", "France", 1890, "Pocket watch", "38mm", "Remontoir","Cylinder", "Key","3"],
+    ["Vostok precision class", "Urss", 1962, "Wristwatch", "Wostok 2809A", "Wostok", "Swiss", "Manual","4"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"],
+    ["Volna", "Urss", 1960, "Wristwatch", "Wostok 2809A", "ChChZ", "Swiss", "Manual","1"]];
+const sourseOrder = {'Year' : 2};
 
 var itemsOrder = [];
 for (var i = 0; i <= itemsSourse.length-1; i++) {
@@ -22,7 +32,7 @@ function assignItems(){
 if (items != null) {
     for (var itemId = 0;  itemId<items.length; itemId++) {
     items[itemId].innerHTML=
-    '<img src="images/watches/'+itemsOrder[itemId]+'.jpg" alt="watch"><table><caption><h3>'+itemsSourse[itemsOrder[itemId]][0]+
+    '<img src="images/watches/'+itemsSourse[itemsOrder[itemId]][8]+'.jpg" alt="watch"><table><caption><a href="'+itemsSourse[itemsOrder[itemId]][8]+'.html"><h3>'+itemsSourse[itemsOrder[itemId]][0]+
     '</h3></caption><tbody><tr><td>Manufacturer</td><td>'+itemsSourse[itemsOrder[itemId]][1]+
     '</td></tr><tr><td>Production year</td><td>'+itemsSourse[itemsOrder[itemId]][2]+
     '</td></tr><tr><td>Type</td><td>'+itemsSourse[itemsOrder[itemId]][3]+
