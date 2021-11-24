@@ -152,8 +152,9 @@ a {
 footer {
     position: fixed;
     bottom:0px;
+    left:0px;
     height: 20px;
-    width: 100%;
+    width: 110%;
     vertical-align: center ;
     background-color: #444;
     color: #aaa;
