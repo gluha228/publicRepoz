@@ -11,6 +11,7 @@
     <div class="header-logo">
         <img src="images/menu-icon.png" alt="sidebar" class="menu-button" onclick="getmenu()">
         WatchWiki</div>
+
     <div class="sidebar">
         <div class="article">Main page>
           <a href="index.html"><div class="subarticle">Introduction</div></a>
@@ -25,21 +26,45 @@
         <div class="article">Directory></div>
         <div class="article">Collection></div>
     </div>
+
     <div class="main-content">
         <h2>There you can find wiki collection</h2>
-        <div class="filter-pad">
-            <table>
-                <tr><td class="filter-title">Filters</td><td class="filter" id="filterYear" onclick="filter('Year')">Year</td></tr>
-            </table>
-        </div>
-        <div class="items">
-            
-        </div>
+        <div id="items">
+            <div class="filter-pad">
+                <table>
+                    <tr><td class="filter-title">Filters</td><td class="filter" id="filterYear" @click="filter('Year')">Year</td></tr>
+                </table>
+            </div>
+            <div class="items">
+                    <div class="collection-item" v-for="itemId in currentItemsOrder">
+                        <img v-bind:src="'images/watches/'+itemsSourse[itemId][8]+'.jpg'" alt="watch">
+                        <table>
+                            <caption>
+                                <a v-bind:href="itemsSourse[itemId][8]+'.html'">
+                                    <h3>{{itemsSourse[itemId][0]}}</h3>
+                            </caption>
+                            <tbody>
+                                <tr><td>Manufacturer</td><td>{{ itemsSourse[itemId][1] }}</td></tr>
+                                <tr><td>Production year</td><td>{{ itemsSourse[itemId][2] }}</td></tr>
+                                <tr><td>Type</td><td>{{ itemsSourse[itemId][3] }}</td></tr>
+                                <tr><td>Caliber</td><td>'{{ itemsSourse[itemId][4] }}</td></tr>
+                                <tr><td>Brand</td><td>'{{ itemsSourse[itemId][5] }}</td></tr>
+                                <tr><td>Escapement</td><td>{{ itemsSourse[itemId][6] }}</td></tr>
+                                <tr><td>Winding</td><td>{{ itemsSourse[itemId][7] }}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>    
+    </div>
+
     <footer>
         <div><strong>my email: </strong><a href="mailto:alexander.glushcov@gmail.com">alexander.glushcov@gmail.com</a></div>
         <div>This site is made only for education, there are no items for sale </div>
         <div>&#169 gluha228 2021</div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js.js"></script>
 </body>
 </html>
